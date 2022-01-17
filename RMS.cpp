@@ -21,10 +21,11 @@ int main(){
 
     cout<<"\t""|*-----------------------MENU-----------------------*|""\t\n"<<endl;
     cout<<"\t\t"<<"1) "<<v[0].first<<"\t"<<v[0].second <<" /-"<<endl;
-    cout<<"\t\t"<<"2) "<<v[1].first<<"\t\t"<<v[1].second <<" /-"<<endl;
+    cout<<"\t\t"<<"2) "<<v[1].first<<"\t"<<v[1].second <<" /-"<<endl;
     cout<<"\t\t"<<"3) "<<v[2].first<<"\t\t"<<v[2].second <<" /-"<<endl;
     cout<<"\t\t"<<"4) "<<v[3].first<<"\t"<<v[3].second <<" /-"<<endl;
     cout<<"\t\t"<<"5) "<<v[4].first<<"\t\t"<<v[4].second <<" /-"<<endl;
+    cout<<"\t\t"<<"5) "<<v[5].first<<"\t"<<v[5].second <<" /-"<<endl;
 
     cout<<"\n\t\tPlease select the order number - ";
     cin>>choice;
@@ -57,7 +58,7 @@ int main(){
         cout<<"Invalid Order"<<endl;
         break;
     }
-
+    cout<<"\t\t---------------------ORDER CONFIRMED-----------------------"<<endl;
     cout<<"\t\t-------------------THANK YOU FOR COMING--------------------"<<endl;
 
 
