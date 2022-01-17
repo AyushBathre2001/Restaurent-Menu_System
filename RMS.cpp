@@ -13,7 +13,7 @@ int main(){
     int choice,deals;
     vector<pair<string,int>> v;
     v.push_back(make_pair("Chicken Biryani",250));
-    v.push_back(make_pair("Paneer Tikka",150));
+    v.push_back(make_pair("Chicken Kabab",150));
     v.push_back(make_pair("Veg Biryani",200));
     v.push_back(make_pair("Chilli Chicken",175));
     v.push_back(make_pair("Egg Biryani",100));
