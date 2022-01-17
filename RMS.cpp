@@ -15,8 +15,9 @@ int main(){
     v.push_back(make_pair("Chicken Biryani",250));
     v.push_back(make_pair("Paneer Tikka",150));
     v.push_back(make_pair("Veg Biryani",200));
-    v.push_back(make_pair("Chilli Paneer",175));
+    v.push_back(make_pair("Chilli Chicken",175));
     v.push_back(make_pair("Egg Biryani",100));
+    v.push_back(make_pair("Chicken Lollipop",100));
 
     cout<<"\t""|*-----------------------MENU-----------------------*|""\t\n"<<endl;
     cout<<"\t\t"<<"1) "<<v[0].first<<"\t"<<v[0].second <<" /-"<<endl;
