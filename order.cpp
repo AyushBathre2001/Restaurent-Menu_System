@@ -6,59 +6,63 @@ class RMS
 
 public:
     int choice, deals;
-    int total_bill = 0,total_deals = 0;
-    string more;
-    
+    int total_bill = 0, total_deals = 0;
+    char more;
 
     void print_order(vector<pair<string, int>> v1, vector<pair<int, int>> v2)
-    {    
-        
-        for(int i = 0;i<v2.size();i++){
-            cout<<"Order number "<<i+1<<" - "<<v1[v2[i].first].first<<endl;
-            cout<<"No. of deals - "<<v2[i].second<<endl;
+    {
+        cout<<"\t-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=ORDER_CONFIRMED-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"<<endl;
+        cout<<"\n\n";
+        for (int i = 0; i < v2.size(); i++)
+        {
+            cout << "\tORDER NUMBER  " << i + 1 << " => " << v1[v2[i].first].first << endl;
+            cout << "\tNO. OF DEALS - " << v2[i].second << endl;
             total_deals = total_deals + v2[i].second;
-            cout<<"Price of each deal"<<v1[v2[i].first].second<<endl;
-            cout<<"Total price - "<<(v1[v2[i].first].second)*(v2[i].second);
-            total_bill = total_bill + ((v1[v2[i].first].second)*(v2[i].second));
-            cout<<"\n"<<endl;
-
-            cout<<"Total orders - "<<v2.size();
-            cout<<"Total no. of deals - "<<total_deals<<endl;
-            cout<<"Total Bill - "<<total_bill<<endl;
-
+            cout << "\tPRICE OF EACH DEAL => " << v1[v2[i].first].second <<"/-"<< endl;
+            cout << "\tTOTAL PRICE => " << (v1[v2[i].first].second) * (v2[i].second)<<"/-";
+            total_bill = total_bill + ((v1[v2[i].first].second) * (v2[i].second));
+            cout << "\n"
+                 << endl;
         }
+        cout << "\t\t\tTOTAL DISHES - " << v2.size()<<endl;
+        cout << "\t\t\tTOTAL NO. OF DEALS - " << total_deals << endl;
+        cout << "\t\t\tTOTAL BILL => " << total_bill <<"/-"<< endl;
+
+        cout<<"\t------------------------------------------------------------------------------------------"<<endl;
     }
 
-    void order(vector<pair<string, int>> v,vector<pair<int,int>> od)
+    void order(vector<pair<string, int>> v, vector<pair<int, int>> od)
     {
         cout << "\t"
-                "|*-----------------------MENU-----------------------*|"
+                "|*======================MENU=======================*|"
                 "\t\n"
              << endl;
         cout << "\t\t"
-             << "1) " << v[0].first << "\t" << v[0].second << " /-" << endl;
+             << "1) " << v[0].first << "\t" << v[0].second << " /-\n" << endl;
         cout << "\t\t"
-             << "2) " << v[1].first << "\t" << v[1].second << " /-" << endl;
+             << "2) " << v[1].first << "\t" << v[1].second << " /-\n" << endl;
         cout << "\t\t"
-             << "3) " << v[2].first << "\t\t" << v[2].second << " /-" << endl;
+             << "3) " << v[2].first << "\t\t" << v[2].second << " /-\n" << endl;
         cout << "\t\t"
-             << "4) " << v[3].first << "\t" << v[3].second << " /-" << endl;
+             << "4) " << v[3].first << "\t" << v[3].second << " /-\n" << endl;
         cout << "\t\t"
-             << "5) " << v[4].first << "\t\t" << v[4].second << " /-" << endl;
+             << "5) " << v[4].first << "\t\t" << v[4].second << " /-\n" << endl;
         cout << "\t\t"
-             << "6) " << v[5].first << "\t" << v[5].second << " /-" << endl;
+             << "6) " << v[5].first << "\t" << v[5].second << " /-\n" << endl;
 
-        cout << "\n\t\tPlease select the order number - ";
+        cout << "\t|*------------------------------------------------*|"<<endl;
+
+        cout << "\n\t\tPLEASE SELECT THE ORDER NUMBER - ";
         cin >> choice;
-        cout << "\t\tPlease enter the number of deals - ";
+        cout << "\n\t\tPLEASE ENTER THE NUMBER OF DEALS - ";
         cin >> deals;
 
-        od.push_back(make_pair(choice, deals));
-        cout << "Do you want to order anything else ?(Yes/No)" << endl;
+        od.push_back(make_pair(choice-1, deals));
+        cout << "DO YOU WANT TO ORDER ANYTHING ELSE ?(Y/N)" << endl;
         cin >> more;
-        if (more == "Yes")
+        if (more == 'Y')
         {
-            order(v,od);
+            order(v, od);
         }
         else
         {
@@ -80,7 +84,7 @@ int main()
     v.push_back(make_pair("Egg Biryani", 100));
     v.push_back(make_pair("Chicken Lollipop", 100));
 
-    obj.order(v,od);
+    obj.order(v, od);
 
     return 0;
 }
