@@ -37,7 +37,7 @@ public:
         cout << "\t\t\tTOTAL NO. OF DEALS - " << total_deals << endl;
         cout << "\t\t\tTOTAL BILL => " << total_bill << "/-" << endl;
 
-        setcolor(0x875);
+        setcolor(0x87);
         cout << "\t------------------------------------------------------------------------------------------" << endl;
         cout << "\t\t\t\t\t*PLEASE VISIT AGAIN*" << endl;
         cout << "\t------------------------------------------------------------------------------------------" << endl;
